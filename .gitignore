@@ -9,3 +9,4 @@ composer.lock
 .php-cs-fixer.cache
 .git
 .phpunit.result.cache
+publish.sh
