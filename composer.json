@@ -1,0 +1,43 @@
+{
+    "name": "ptadmin/build",
+    "description": "表单构建工具，基于layui构建表单",
+    "version": "0.0.1",
+    "license": "Apache-2.0",
+    "keywords": ["HTML", "admin", "管理后台", "插件应用", "低代码平台", "addon", "PTAdmin"],
+    "type": "library",
+    "homepage": "https://github.com/ptadmin/build",
+    "authors": [
+        {"name": "Zane", "email": "873934580@qq.com"}
+    ],
+    "require": {
+        "php": "^7.3 | ^8.0",
+        "ext-json": "*",
+        "laravel/framework": "^8.0|^9.0|^10.0",
+        "ptadmin/html": "^1.0"
+    },
+    "require-dev": {
+        "phpstan/phpstan": "^1.10",
+        "phpstan/phpstan-strict-rules": "^1.5",
+        "phpunit/phpunit": "^9.5.10"
+    },
+    "autoload": {
+        "psr-4": {
+            "PTAdmin\\Build\\": "src/"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "PTAdmin\\Build\\Tests\\": "tests/"
+        }
+    },
+    "scripts": {
+        "phpstan": "vendor/bin/phpstan.phar analyse app addons package --configuration phpstan.neon"
+    },
+    "extra": {
+        "laravel": {
+            "providers": [
+                "PTAdmin\\Build\\ServiceProvider"
+            ]
+        }
+    }
+}
