@@ -37,6 +37,7 @@ use PTAdmin\Build\Traits\CallTrait;
  * @method static \PTAdmin\Build\Components\Select   select(string $field, string $label = '',mixed $value = '')
  * @method static \PTAdmin\Build\Components\Icon     icon(string $field, string $label = '',mixed $value = '')
  * @method static \PTAdmin\Build\Components\Img      img(string $field, string $label = '',mixed $value = '')
+ * @method static \PTAdmin\Build\Components\Images   images(string $field, string $label = '',mixed $value = '')
  * @method static \PTAdmin\Build\Components\Button   button(string $field, string $label = '',mixed $value = '')
  */
 class Layui
