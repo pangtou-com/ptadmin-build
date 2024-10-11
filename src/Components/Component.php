@@ -150,7 +150,10 @@ abstract class Component extends Base
 
     public function initialize(): void
     {
-        if (null !== $this->label) {
+        if (null === $this->kernel) {
+            return;
+        }
+        if (null === $this->label || '' === $this->label) {
             $this->label = $this->kernel->getLabel($this->field);
         }
         if (null === $this->value) {
