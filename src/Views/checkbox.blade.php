@@ -11,7 +11,7 @@
                     name="{{$base->getField()}}[]"
                     value="{{$val['value']}}"
                     title="{{$val['label']}}"
-                    @if($val['value'] == $base->getValue()) checked @endif
+                    @if(in_array($val['value'], (array)$base->getValue())) checked @endif
                     @if((isset($val['disabled']) && $val['disabled']) || $base->getDisabled()) disabled @endif>
             @endforeach
         </div>
