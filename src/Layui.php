@@ -31,6 +31,8 @@ use PTAdmin\Build\Traits\CallTrait;
  * @method static \PTAdmin\Build\Components\Text     password(string $field, string $label = '', mixed $value = '')
  * @method static \PTAdmin\Build\Components\Avatar   avatar(string $field, string $label = '', mixed $value = '')
  * @method static \PTAdmin\Build\Components\Radio    radio(string $field, string $label = '', mixed $value = '')
+ * @method static \PTAdmin\Build\Components\Checkbox checkbox(string $field, string $label = '', mixed $value = '')
+ * @method static \PTAdmin\Build\Components\RichTxt  richTxt(string $field, string $label = '', mixed $value = '')
  * @method static \PTAdmin\Build\Components\Hidden   hidden(string $field, mixed $value = '')
  * @method static \PTAdmin\Build\Components\Number   number(string $field, string $label = '',mixed $value = '')
  * @method static \PTAdmin\Build\Components\Textarea textarea(string $field, string $label = '',mixed $value = '')

@@ -5,7 +5,7 @@
         {{-- 渲染表单域标签信息 --}}
         <x-label :base="$base"></x-label>
         <div class="layui-input-block">
-            <textarea class="editor" data-type="{{setting('editor', 'tiny')}}" name="{{$base->getField()}}" id="{{$base->getField()}}" >{{$base->getValue()}}</textarea>
+            <textarea class="ptadmin-editor" data-type="{{setting('editor', 'tiny')}}" name="{{$base->getField()}}" id="{{$base->getField()}}" >{{$base->getValue()}}</textarea>
         </div>
     </div>
 </x-col>

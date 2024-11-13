@@ -5,7 +5,7 @@
     <div class="layui-form-item">
         <x-label :base="$base"></x-label>
         <div class="layui-input-block">
-            <select @if($base->getDisabled()) disabled @endif name="{{$base->getField()}}" lay-filter="{{$base->getField()}}" id="{{$base->getField()}}">
+            <select @if($base->getDisabled()) disabled @endif name="{{$base->getField()}}" @if($base->getRequired()) lay-verify="required" @endif lay-filter="{{$base->getField()}}" id="{{$base->getField()}}">
                 @if($base->getPlaceholder())
                     <option value="">{{$base->getPlaceholder()}}</option>
                 @endif

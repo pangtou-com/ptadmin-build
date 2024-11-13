@@ -8,7 +8,7 @@
             @foreach($base->getOptions() as $key => $val)
                 <input
                     type="checkbox"
-                    name="{{$base->getField()}}"
+                    name="{{$base->getField()}}[]"
                     value="{{$val['value']}}"
                     title="{{$val['label']}}"
                     @if($val['value'] == $base->getValue()) checked @endif

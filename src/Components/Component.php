@@ -217,14 +217,13 @@ abstract class Component extends Base
         if (isset($rule['options'])) {
             $this->options($rule['options']);
         }
+        // 设置默认值
+        $val = null !== $this->kernel
+            ? $this->kernel->getFieldValue($rule['field'], $rule['value'] ?? null)
+            : $rule['value'] ?? null;
 
-        if (null !== $this->kernel && !$this->kernel->isExists()) {
-            $this->default($rule['value'] ?? null);
-        } else {
-            if (isset($rule['field'])) {
-                $this->value($this->kernel->getFieldValue($rule['field']));
-            }
-        }
+        $this->default($val);
+
         // 是否必填
         if (isset($rule['validated'], $rule['validated']['rule'])) {
             if (\in_array('required', $rule['validated']['rule'], true)) {

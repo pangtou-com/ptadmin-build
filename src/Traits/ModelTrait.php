@@ -80,24 +80,32 @@ trait ModelTrait
         return $fieldName;
     }
 
-    public function getFieldValue($fieldName)
+    /**
+     * 获取模型字段的值.
+     *
+     * @param $fieldName
+     * @param $default
+     *
+     * @return null|mixed
+     */
+    public function getFieldValue($fieldName, $default = null)
     {
         if ($this->model instanceof Model || \is_object($this->model)) {
             // 查看是否需要隐藏的字段
             if (method_exists($this->model, 'getHidden')) {
                 if (\in_array($fieldName, $this->model->getHidden(), true)) {
-                    return null;
+                    return $default;
                 }
             }
 
-            return $this->model->{$fieldName} ?? null;
+            return $this->model->{$fieldName} ?? $default;
         }
 
         if (\is_array($this->model)) {
-            return $this->model[$fieldName] ?? null;
+            return $this->model[$fieldName] ?? $default;
         }
 
-        return null;
+        return $default;
     }
 
     /**
